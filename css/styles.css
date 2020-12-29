@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+/*  background-image: url(../images/matrice.jpg);*/
+  background-size: cover;
+}
+
+body,
+h1,
+div {
+  margin: 0;
+}
+
+.moduleControle {
+  box-sizing: content-box;
+  width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 2em;
+  min-height: 1000px;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.25em;
+  color: maroon;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  flex: 0 1 33%;
+  min-height: 3em;
+  background-color: azure;
+}
+
+nav button:hover {
+  background-color: #d3f5f5;
+}
+
+.float.left {
+  width: 35%;
+  float: left;
+  text-align: right;
+  padding-top: 1em;
+  padding-right: 1%;
+}
+
+#ia {
+  width: 65%;
+  float: right;
+  background-color: #ededed;
+  font-size: 1.25em;
+  padding: 1em;
+  border-radius: 10px;
+  border-left: 5px dashed maroon;
+}
+
+.codeur {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */
