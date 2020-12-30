@@ -191,7 +191,7 @@ let arrCodeurDetails = [
         mets: "couscous, sushi, chocolat",
         musique: "minimale, techno",
         activites: "randonnée, surf, dessiner",
-        texte: "Kika, le robot, est conçu pour être un coach sportif qui ce renseigne sur notre alimentation et s'adapte."
+        texte: "Kika, le robot, est conçu pour être un coach sportif qui se renseigne sur notre alimentation et s'adapte."
     },
     {
         pseudo: "coderPeach",
@@ -240,7 +240,7 @@ let arrCodeurDetails = [
         mets: "Pizza, sushi, gaufres",
         musique: "Techno, le reggae",
         activites: "le snowboard, le surf, la randonnée",
-        texte: "Deadpool est conçu pour aider les gens à resté focus (à les pousser vers le haut). Si quelqu'un lui dit : \"je veux être fort en programmation et en dessin.\" Il va pousser la personne à se créer une routine, à lui proposer à plusieurs moments de la journée de s'entraîner, de trouver des manières pour s'inspirer. D'ailleurs, Deadpool est aussi un mine d'information, il connaît tout et a accès à tout. Il est très cultivé : films, livres, documentaires, informations diverses."
+        texte: "Deadpool est conçu pour aider les gens à rester focus (à les pousser vers le haut). Si quelqu'un lui dit : \"je veux être fort en programmation et en dessin.\" Il va pousser la personne à se créer une routine, à lui proposer à plusieurs moments de la journée de s'entraîner, de trouver des manières pour s'inspirer. D'ailleurs, Deadpool est aussi un mine d'information, il connaît tout et a accès à tout. Il est très cultivé : films, livres, documentaires, informations diverses."
     },
     {
         pseudo: "palomita",
