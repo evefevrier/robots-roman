@@ -10,3 +10,5 @@ Les textes descriptifs des robots répondent à la question:
 
 Soyez indulgents, ce ne sont pas tous les étudiants qui ont terminé le projet! 
 Ils devaient aussi coder l'interface dans une version légèrement différente que celle présentée ici.
+
+Visionner le projet [Robotsroman-2020](https://evefevrier.github.io/robots-roman-2020/)
