@@ -1,6 +1,8 @@
 //*******************************************
 // Robotsroman
 // @author Ève Février
+// @todo modifier les styles pour que les volumes verticaux s'ajustent mieux
+//       à la longueur des textes au survol de l'avatar
 //*******************************************
 
 // Déclaration d'objet(s)

@@ -233,7 +233,7 @@ let arrCodeurDetails = [
         mets: "Poutine, Wraps, Burritos",
         musique: "Rap français, Rock, Musique québécoise",
         activites: "Hockey, Jeux vidéo, Pokemon",
-        texte: "Cubone le robot est conçu pour la pratique d'activité sportive comme le hockey. Il est également utile pour déterminer la valeur de tout objet sur terre sans le moindre effort."
+        texte: "Cubone le robot est conçu pour la pratique d'activités sportives comme le hockey. Il est également utile pour déterminer la valeur de tout objet sur terre sans le moindre effort."
     },
     {
         pseudo: "cropBst",
