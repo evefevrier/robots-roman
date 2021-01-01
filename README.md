@@ -1,6 +1,6 @@
 # robots-roman-2020
 
-Un projet collaboratif des étudiants de session I du cours Introduction à la programmation,
+Un projet collaboratif des étudiants de session _1_ du cours Introduction à la programmation,
 du programme Techniques d'intégration multimédia du Cégep de Sainte-Foy. 
 
 Les robots ont été réalisés avec la bibliothèque P5JS.
