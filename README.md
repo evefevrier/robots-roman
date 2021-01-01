@@ -8,7 +8,7 @@ Les textes descriptifs des robots répondent à la question:
 > À qui, à quoi servirait ton robot s'il était réel et doté d'intelligence artificielle?
 
 Les étudiants devaient aussi coder l'interface dans une version légèrement différente que celle présentée ici.
-Vous remarquerez peut-être quelques imperfections dû au fait que certaines étudiants n'ont pas tout terminé ou tout réussi.
+Vous remarquerez peut-être quelques imperfections dû au fait que certains étudiants n'ont pas tout terminé ou tout réussi.
 Les plus curieux pourront tenter de trouver le _Easter Egg_ caché dans le robot Cubelios.
 
 Visionner le projet [Robotsroman-2020](https://evefevrier.github.io/robots-roman-2020/)
