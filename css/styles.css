@@ -1,78 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-    background-image: url(../images/tuile-3.jpg);
-    background-repeat: repeat-x;
-    /*background-size: cover;*/
-    background-size: auto 90vh;
-}
-
+/* Base */
+* { box-sizing: border-box;}
 body,
-h1,
-div {
+h1 {
     margin: 0;
+    text-align: center;
+}
+h1 {
+    padding: 0.35em;
+} 
+canvas {
+    border-radius: 20px;
 }
 
-.moduleControle {
-    box-sizing: content-box;
-    width: 600px;
-    margin: auto;
-    background-color: #fff;
-    padding: 2em 2em 2em 2em;
-    /* min-height: calc(100vh + 10em);*/
-    overflow: hidden;
-}
-
-blockquote {
-    font-style: italic;
-    font-size: 1.25em;
-    color: maroon;
-}
-
+/* navigation */
 nav {
+    padding: 1em;
+}
+
+/* Espace du codeur */
+.codeur {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-nav button {
-    flex: 0 1 50%;
-    min-height: 3em;
-    background-color: azure;
-}
-
-nav button:hover {
-    background-color: #d3f5f5;
-}
-
-.float.left {
-    width: 25%;
-    float: left;
+.codeur figure {
+    margin: 0 1em 0 0;
     text-align: right;
-    padding-top: 1em;
-    padding-right: 1%;
+    width: 175px;
 }
 
-#ia {
-    width: 75%;
-    float: right;
+.codeur__avatar {
+    width: 80px
+}
+
+.codeur__texte {
+    width: 425px;
+    text-align: left;
     background-color: #ededed;
+    background: linear-gradient(90deg, rgba(237, 237, 237, 1) 70%, rgba(255, 255, 255, 1) 95%);
     font-size: 1.25em;
     padding: 1em;
     border-radius: 10px;
     border-left: 5px dashed maroon;
+    min-height: 250px;
 }
 
-.codeur {
-    margin: 0;
+
+/* Titre du site */
+span {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
 }
 
-h1 {
-    font-family: "Roboto", sans-serif;
+.r {
+    font-weight: 900;
+    color: maroon;
+    transform: scale(1.25);
 }
 
-/*# sourceMappingURL=styles.css.map */
+.o1 {
+    font-weight: 400;
+    color: rgb(255, 50, 0);
+    transform: rotate(-20deg) skew(5deg);
+}
+
+.b {
+    font-weight: 400;
+    color: rgb(114, 9, 163);
+    transform: scaleY(1.2);
+}
+
+.o2 {
+    color: rgb(251, 153, 16);
+    transform: rotate(25deg);
+}
+
+.t {
+    font-weight: 100;
+    transform: skew(15deg) scale(1.25);
+    color: rgb(51, 102, 243);
+}
+
+.s {
+    font-weight: 700;
+    transform: skew(-15deg);
+    color: rgb(97, 188, 6);
+    padding-right: 0.15em;
+}

@@ -2,55 +2,89 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet-Examen</title>
+    <title>Robots-roman 2021</title>
+    <link rel="icon" href="favicon.ico" sizes="any"> 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="moduleControle">
+    <main>
+        <h1><span class="r">R</span><span class="o1">o</span><span class="b">b</span><span class="o2">o</span><span
+                class="t">t</span><span class="s">s</span>roman</h1>
 
-        <h1>L'incroyable robotsroman de 2020</h1>
-
-        <!-- Changer la source du iframe pour pointer vers votre script de robot -->
-        <iframe id="tagIframe" src="https://editor.p5js.org/efevrier/embed/kxl1NKuiR" width="605" height="355" scrolling="no">
-        </iframe>
+        <div id="sketch-holder"></div>
 
         <nav>
-            <button type="button" id="tagBtnPrecedent">◄ Précédent</button>
-            <!--            <button type="button" id="tagBtnHasard">Au hasard!</button>-->
-            <button type="button" id="tagBtnSuivant">Suivant ► </button>
+            <button type="button" id="btnPrecedent">Précédent</button>
+            <button type="button" id="btnSuivant">Suivant</button>
+            <select name="tagSelect" id="tagSelect">
+                <option value="">Choisir le robot de</option>
+                <option value="r0">Marika</option>
+                <option value="r1">Rosalie</option>
+                <option value="r2">Giselle</option>
+                <option value="r3">Marianne</option>
+                <option value="r4">Éloïse</option>
+                <option value="r5">Xavier</option>
+                <option value="r6">Laurianne</option>
+                <option value="r7">Andréanne</option>
+                <option value="r8">Samuel</option>
+                <option value="r9">Benjamin</option>
+                <option value="r10">Michel</option>
+                <option value="r11">Justin</option>
+                <option value="r12">Alexis</option>
+                <option value="r13">Guillaume</option>
+                <option value="r14">Louis-Philippe</option>
+                <option value="r15">Clodiane</option>
+                <option value="r16">Isaac</option>
+                <option value="r17">Jérémy</option>
+                <option value="r18">Anaïs</option>
+                <option value="r19">Christopher</option>
+                <option value="r20">Louis-Émile</option>
+                <option value="r21">Chalarak</option>
+                <option value="r22">Janis</option>
+                <option value="r23">Daren</option>
+                <option value="r24">Malorie</option>
+                <!-- <option value="r25">Michael</option>  -->
+            </select>
+            <button type="button" id="btnGo">Go</button>
         </nav>
 
-        <div class="data">
-            <div class="float left">
-
-                <!-- Personnaliser l'avatar et le paragraphe d'infos sur le codeur (vous) -->
-                <img id="avatar" src="images/palomita.png" alt="palomita" width="80" height="80">
-                <p class="codeur" id="codeur">
-                    <strong>palomita</strong><br>
-                    🍞 : masala dosa, guacamole<br>
-                    🕺: La marche, la danse<br>
-                    🎵: klezmer, jazz, chansonniers
-                </p>
-
+        <section class="codeur">
+            <figure>
+                <img id="avatar" class="codeur__avatar" src="images/marz.png" alt="quelqu'un">
+                <figcaption id="infosCodeur" class="codeur__profil" hidden>
+                    <strong>unPseudo</strong><br>
+                    🍞 : met1, met2<br>
+                    🕺: activité1, activité2<br>
+                    🎵: style1, style2, style3
+                </figcaption>
+            </figure>
+            <div id="ia" class="codeur__texte">
+                Ici apparait la description du robot.
             </div>
-
-            <!-- Placer dans ce paragraphe la description de votre robot-->
-            <p id="ia"> La robote Esmeralda est conçue pour danser et faire danser sur des rythmes latinos ou klezmer. 🍞</p>
-
-        </div>
-
-    </div>
-
-    <script src="js/listes.js"> </script>
-    <script src="js/script.js"> </script>
-
+        </section>
+    </main>
+    <footer>
+        <p><small>
+            &copy; Le robotsroman de TIM2021, <br>
+            une réalisation des étudiant(e)s de première année du programme des  <br>
+            <a href="https://timcsf.ca">Techniques d'intégration multimédia du Cégep de Sainte-Foy </a> <br>
+                dans le cadre du cours d'Introduction à la programmation 582-101-SF.
+           
+        </small></p>
+    </footer>
+    <script src="js/libs/p5.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
