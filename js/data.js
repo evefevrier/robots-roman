@@ -1981,7 +1981,7 @@ let arrCodeurs = [
   },
   { /* robot 1 */
     nom: "Rosalie Roy",
-    pseudo: "pinkBlossom",
+    pseudo: "pinkblossom",
     mets: "lasagne, macaroni, jambon",
     musique: "pop, électro, rock",
     activites: "musique, cuisine, vélo",
