@@ -21,7 +21,8 @@
   //      texte: "Kiki, le robot, est conçu pour trier des déchets directement en les jetant. Ce qui se recycle est envoyé dans un tube. Ce qui ne se recycle pas, dans un autre. Les tubes sont alimentés par énergie solaire, tout comme le robot lui-même. Ces tubes mène chacun à une genre d'usine, qui, rendu là, j'espère, ne brulera pas les déchets."
   //      robot: {strNom:"Kiki", x = -390, decorer: function...}
   //    }
-  // 
+  /* 
+  *     à chaque changement de robot replacer l'option en sélection de la liste déroulante
   /*********************************************************/
 
   /* Objet principal - app Visionneuse */
