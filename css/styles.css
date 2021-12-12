@@ -8,13 +8,15 @@ h1 {
 h1 {
     padding: 0.35em;
 } 
-#sketch-holder{
-    max-width:600px;
-    margin: auto;
+#sketch-holder{ 
+    margin: auto; 
 }
 canvas {
     border-radius: 20px;  
     object-fit: cover; 
+   min-width:300px;
+    width:100%; 
+    max-width:600px;
 }
 footer{ 
     width:clamp(200px, 90%, 800px);

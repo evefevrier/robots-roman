@@ -111,6 +111,7 @@
  /* au chargement de la page 'load' */
  window.addEventListener("load", function () {
    visionneuse.reInitialiser(); 
+   document.querySelector('canvas').style.width = '100%';
  });
  /* roll over - état survol - 'mouseover' */
  document.getElementById("avatar").addEventListener("mouseover", function () {

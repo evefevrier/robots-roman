@@ -1388,44 +1388,50 @@ strokeWeight(1);
       tagP.html("Bonjour mon nom est " + this.strNom);
     }
   },
-  /* Robot 18, celui d'Anaïs (pas terminé) */
+  /* Robot 18, celui d'Anaïs */
   {
     x: -350,
     strNom: "Allobo",
+  
     decorer: function () {
-      background(220);
-      // line(this.x + 260, 150, this.x + 500, 150);
-      // triangle(this.x + 260, 150, this.x, 160, this.x, 170)
+      fill(65,105,205);
+      rect(0, 0, 600, 200);
+      fill(255,248,220);
+      circle(300, 200, 300);
+      fill(220);
+      rect(0, 200, 600, 170);
+      noStroke(); 
     },
-
+  
     afficher: function () {
       // les yeux
       //couleur de remplissage: blanc
+      stroke(1);
       fill(255);
-
+  
       //la forme
       square(this.x + 260, 80, 20);
       square(this.x + 310, 80, 20);
-
+  
       //les antennes
       line(this.x + 270, 80, this.x + 260, 50);
       line(this.x + 270, 80, this.x + 280, 50);
       line(this.x + 310, 50, this.x + 320, 80);
       line(this.x + 330, 50, this.x + 320, 80);
-
+  
       //le haut du corps
       //couleur de remplissage : bleu
       fill(0, 0, 255);
-
+  
       //la forme
       rect(this.x + 260, 100, 70, 90);
-
+  
       //le bas du corps
       //couleur de remplissage : rouge
       fill(255, 0, 0);
       //forme
       rect(this.x + 280, 190, 30, 50);
-
+  
       //la base et les roues
       //couleur de remplissage
       fill(0);
@@ -1434,21 +1440,18 @@ strokeWeight(1);
       circle(this.x + 320, 250, 25);
       rect(this.x + 250, 230, 90, 20);
     },
-
+  
     arriver: function () {
-
       if (this.x < 10) {
         this.x = this.x + 2;
       } else {
         this.x = 10;
       }
     },
-
+  
     direBonjour() {
-      /* erreur ici, robot.strNom au lieu de this.strNom */
-      tagP.html("Bonjour mon nom est " + this.strNom);
-    }
-
+      tagP.html("Allo! Je m'appelle " + this.strNom + "!");
+    },
   },
   /* Robot 19, celui de Christopher */
   {
@@ -2193,8 +2196,8 @@ function setup() {
 
   let canevas = createCanvas(600, 350);
   canevas.parent('sketch-holder'); 
-  canevas.style('min-width', '300px');  
-  canevas.style('width', '100%'); 
+  // canevas.style('min-width', '300px');  
+  // canevas.style('width', '100%'); 
 
   /* DÉBUT zone de paroles du robot */
   tagP = createP('...');
