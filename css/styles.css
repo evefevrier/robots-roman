@@ -16,8 +16,8 @@ canvas {
     border-radius: 20px;  
     object-fit: cover; 
 }
-footer{
-    width:800px;
+footer{ 
+    width:clamp(200px, 90%, 800px);
     margin:2rem auto;
 }
 
