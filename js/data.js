@@ -2192,13 +2192,14 @@ function setup() {
   // intNoRobot = Math.floor(Math.random() * arrRobots.length);
 
   let canevas = createCanvas(600, 350);
-  canevas.parent('sketch-holder');
+  canevas.parent('sketch-holder'); 
+  canevas.style('min-width', '300px');  
+  canevas.style('width', '100%'); 
 
   /* DÉBUT zone de paroles du robot */
   tagP = createP('...');
-  tagP.position(0, 350);
-  tagP.style('width', '600px');
-  tagP.style('margin-left', 'calc(50% - 300px)');
+  tagP.position(0, 400);
+  tagP.style('width', '100%'); 
   tagP.style('background-color', 'rgba(255,255,255,0.5)');
   tagP.style('text-align', 'center');
   tagP.style('padding', '15px');

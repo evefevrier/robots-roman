@@ -2,14 +2,23 @@
 * { box-sizing: border-box;}
 body,
 h1 {
-    margin: 0;
+    margin: 2rem 0 1rem 0;
     text-align: center;
 }
 h1 {
     padding: 0.35em;
 } 
+#sketch-holder{
+    max-width:600px;
+    margin: auto;
+}
 canvas {
-    border-radius: 20px;
+    border-radius: 20px;  
+    object-fit: cover; 
+}
+footer{
+    width:800px;
+    margin:2rem auto;
 }
 
 /* navigation */
@@ -42,7 +51,7 @@ nav {
     padding: 1em;
     border-radius: 10px;
     border-left: 5px dashed maroon;
-    min-height: 250px;
+    min-height: 260px;
 }
 
 

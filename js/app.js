@@ -1,12 +1,14 @@
  /***************************************
   * app Visionneuse (Main) 
   * @author Ève Février
+  * 
+  * @todo Adapter pour le mobile (écran étroit)
+  * @todo À chaque changement de robot replacer l'option en sélection de la liste déroulante
   * @todo Ajouter de l'interactivité : 
   *       au clic, en disant son "bonjour...""
   *       il se remet en route pour traverser l'écran
   *       un autre clic, le bonjour s'efface et il revient
-  * 
-  *       modifier la structure de données 
+  * @todo modifier la structure de données 
   *       conserver uniquement arrCodeurs 
   *       en lui ajoutant un attribut 
   *       robot : {objRobot}
@@ -22,7 +24,6 @@
   //      robot: {strNom:"Kiki", x = -390, decorer: function...}
   //    }
   /* 
-  *     à chaque changement de robot replacer l'option en sélection de la liste déroulante
   /*********************************************************/
 
   /* Objet principal - app Visionneuse */
@@ -57,10 +58,10 @@
          break;
      }
      this.reInitialiser();
-     console.log ("intNoRobot " + intNoRobot );
+    //  console.log ("intNoRobot " + intNoRobot );
    },
    changerCodeur: function () {
-     console.log(arrCodeurs[intNoRobot]);
+    //  console.log(arrCodeurs[intNoRobot]);
     /* changer la source de la balise image pour afficher l'avatar du codeur */
      document.getElementById('avatar').src = "images/" + arrCodeurs[intNoRobot].pseudo + ".png"
      
@@ -79,7 +80,8 @@
    }, 
    reInitialiser: function () { 
      this.changerCodeur();
-     afficherCacher("infosCodeur", false);   
+     afficherCacher("infosCodeur", false);
+     document.getElementById('tagSelect')[0].selected = true; 
    }
  };
 
@@ -118,5 +120,15 @@
  document.getElementById("avatar").addEventListener("mouseleave", function () {
    afficherCacher("infosCodeur", false);
  });
+
+ /* ajout des flèches pour se déplacer */
+window.addEventListener('keydown', function(objEvenement){
+  // console.log(objEvenement);
+  if(objEvenement.key == "ArrowLeft"){
+    visionneuse.changerRobot("precedent");
+  } else if (objEvenement.key == "ArrowRight"){
+    visionneuse.changerRobot("suivant");
+  }
+});
 
  

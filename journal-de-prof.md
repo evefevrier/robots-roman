@@ -18,7 +18,6 @@ Ils doivent se reconnecter à leur compte P5JS pour apporter des modifications e
 On code la visionneuse avec ses boutons précédent, suivant et go.
 Le codage est simple, la complexité est plutôt dans 
 l'organisation des fichiers, trois balises scripts, le principe des données externes (ici, des listes d'objets)...
-Parfois, ils me regardent avec de grands yeux... alors souvent, je perd contenance et me met à parler trop vite...
 
 ##Cours 28
 Ajout de la section codeur.
@@ -35,6 +34,3 @@ Exercice de révision : le jeu du bonhomme pendu.
 
 
 
-<del>
-Alleluia. Fuck le patriarcat.
-</del>
