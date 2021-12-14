@@ -2203,6 +2203,7 @@ function setup() {
   tagP = createP('...');
   tagP.position(0, 400);
   tagP.style('width', '100%'); 
+  // tagP.style('width', '600px'); 
   tagP.style('background-color', 'rgba(255,255,255,0.5)');
   tagP.style('text-align', 'center');
   tagP.style('padding', '15px');

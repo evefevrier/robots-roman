@@ -2,9 +2,12 @@
   * app Visionneuse (Main) 
   * @author Ève Février
   * 
+  * @todo Si scroll faire disparaitre tagP
   * @todo Adapter pour le mobile (écran étroit)
   * @todo À chaque changement de robot replacer l'option en sélection de la liste déroulante
-  * @todo Ajouter de l'interactivité : 
+  * @todo ROBOT - ajouter de l'animation : 
+  *       faire bouger le fond comme pour Benjamin OU animation d'ambiance
+  * @todo ROBOT - ajouter de l'interactivité : 
   *       au clic, en disant son "bonjour...""
   *       il se remet en route pour traverser l'écran
   *       un autre clic, le bonjour s'efface et il revient
@@ -46,10 +49,13 @@
          }
          break;
        case "auChoix":
-         strChoix = document.getElementById("tagSelect").value;
-         strChoix = strChoix.substring(1);
-        //  intChoix = parseInt(strChoix) - 1;
+         // récupérer le value de l'option choisie
+         let strChoix = document.getElementById("tagSelect").value;
+         // obtenir une sous-chaine excluant la lettre r du début
+         strChoix = strChoix.substring(1); 
+         // convertir en nombre
          intChoix = parseInt(strChoix);
+         // si nombre valide, affecter intChoix à la variable globale intNoRobot
          if (intChoix >= 0 && intChoix < arrRobots.length) {
            intNoRobot = intChoix;
          }
