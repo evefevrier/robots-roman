@@ -117,19 +117,34 @@ span {
 
 /* les boutons */
 button {
-    background-color: rgba(0, 0, 255, 0.3);
-    transition: all 0.35s ease;
-    padding:0.5rem;
+    color:black;
+    font-weight: 600;
+    background-color: rgba(0, 0, 255, 0.25);
+    transition: all 0.3s ease;
+    padding:0.6rem;
     border:none;
     border-radius: 3px;
+}
+@media(min-width:600px){
+    button { 
+        padding:0.75rem; 
+    }
 }
 button:hover, button:focus {
     color: #fff;
     background-color: rgba(0, 0, 255, 0.75);
 }
 select{
-    padding:0.5rem;
+    padding:0.35rem;
 }
+@media(min-width:600px){
+    select { 
+        padding:0.6rem; 
+    }
+}
+
+/* Le tagP est ajouté juste avant la fermeture du <body>  */
+/* body>p{border:3px solid black;} */
 
 /** 
  * Animations  

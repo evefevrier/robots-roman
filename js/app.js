@@ -114,6 +114,9 @@
  document.getElementById("btnGo").addEventListener("click", function () {
    visionneuse.changerRobot("auChoix");
  });
+ document.getElementById("tagSelect").addEventListener("change", function () {
+  visionneuse.changerRobot("auChoix");
+});
  /* au chargement de la page 'load' */
  window.addEventListener("load", function () {
    visionneuse.reInitialiser(); 
