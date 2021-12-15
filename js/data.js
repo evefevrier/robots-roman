@@ -1047,7 +1047,9 @@ let arrRobots = [
       background(200);
     },
     afficher: function () {
+      stroke(0);
 strokeWeight(1);
+fill(255);
       //le visage
       rect(this.x + 250, 50, 75, 50, 5);
       rect(this.x + 265, 40, 45, 10);

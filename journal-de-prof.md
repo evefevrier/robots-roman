@@ -32,5 +32,5 @@ Contrôle qualité: déboguage, optimisation du code, documentation (docblock po
 Préparation à l'examen.
 Exercice de révision : le jeu du bonhomme pendu.
 
-
-
+-------
+ <3
