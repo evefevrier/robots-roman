@@ -596,29 +596,29 @@ let arrRobots = [
     afficher: function () {
       //color fill : silver
       fill(153, 175, 200);
-  
+
       //head
       rect(this.x + 170, 20, 230, 120);
-  
+
       //ears
       fill(156, 175, 225);
       rect(this.x + 120, 20, 50, 110);
       rect(this.x + 400, 20, 50, 110);
-  
+
       //screen-eyes
       fill(218, 238, 1);
       ellipse(this.x + 285, 80, 180, 55);
       fill(255, 255, 224);
       circle(this.x + 285, 80, 20);
-  
+
       //body
       fill(152, 175, 199);
       rect(this.x + 240, 140, 90, 120);
-  
+
       fill(128, 128, 128);
       rect(this.x + 100, 140, 140, 30);
       rect(this.x + 330, 140, 160, 30);
-  
+
       //wheel
       fill(185, 0, 0);
       rect(this.x + 270, 260, 33, 40);
@@ -1045,11 +1045,11 @@ let arrRobots = [
     /* Manquait la méthode décorer */
     decorer: function () {
       background(200);
-    },
-    afficher: function () {
       stroke(0);
-strokeWeight(1);
-fill(255);
+      strokeWeight(1);
+      fill(255);
+    },
+    afficher: function () { 
       //le visage
       rect(this.x + 250, 50, 75, 50, 5);
       rect(this.x + 265, 40, 45, 10);
@@ -1096,8 +1096,8 @@ fill(255);
       }
     },
     direBonjour: function () {
-      tagP.html("Bonjour, mon nom est " + this.strNom); 
-      console.log("Bonjour, mon nom est " + this.strNom); 
+      tagP.html("Bonjour, mon nom est " + this.strNom);
+      console.log("Bonjour, mon nom est " + this.strNom);
     }
   },
   /* Robot 15, celui de Clodiane */
@@ -1394,46 +1394,46 @@ fill(255);
   {
     x: -350,
     strNom: "Allobo",
-  
+
     decorer: function () {
-      fill(65,105,205);
+      fill(65, 105, 205);
       rect(0, 0, 600, 200);
-      fill(255,248,220);
+      fill(255, 248, 220);
       circle(300, 200, 300);
       fill(220);
       rect(0, 200, 600, 170);
-      noStroke(); 
+      noStroke();
     },
-  
+
     afficher: function () {
       // les yeux
       //couleur de remplissage: blanc
       stroke(1);
       fill(255);
-  
+
       //la forme
       square(this.x + 260, 80, 20);
       square(this.x + 310, 80, 20);
-  
+
       //les antennes
       line(this.x + 270, 80, this.x + 260, 50);
       line(this.x + 270, 80, this.x + 280, 50);
       line(this.x + 310, 50, this.x + 320, 80);
       line(this.x + 330, 50, this.x + 320, 80);
-  
+
       //le haut du corps
       //couleur de remplissage : bleu
       fill(0, 0, 255);
-  
+
       //la forme
       rect(this.x + 260, 100, 70, 90);
-  
+
       //le bas du corps
       //couleur de remplissage : rouge
       fill(255, 0, 0);
       //forme
       rect(this.x + 280, 190, 30, 50);
-  
+
       //la base et les roues
       //couleur de remplissage
       fill(0);
@@ -1442,7 +1442,7 @@ fill(255);
       circle(this.x + 320, 250, 25);
       rect(this.x + 250, 230, 90, 20);
     },
-  
+
     arriver: function () {
       if (this.x < 10) {
         this.x = this.x + 2;
@@ -1450,7 +1450,7 @@ fill(255);
         this.x = 10;
       }
     },
-  
+
     direBonjour() {
       tagP.html("Allo! Je m'appelle " + this.strNom + "!");
     },
@@ -1971,12 +1971,108 @@ fill(255);
       // tagP.style('background-color', 'lavender');
 
     }
-  }
+  },
   /* Robot 25, celui de Michael */
+  {
+    x: -350,
+    strNomRobot: "Αιφπδ",
+    decorer: function () {
+      background(155, 118, 83);
+      //ciel
+      fill(228, 52, 20);
+      noStroke();
+      rect(0, 0, width, height / 3);
+    },
+    afficher: function () {
+      stroke(0);
+      fill(175, 96, 26);
+      //nuages
+      fill(255, 255, 255);
+      noStroke();
+      arc(200, 50, 25 , 20, PI + TWO_PI, TWO_PI);
+      arc(200 + 10, 50, 25 , 45, PI + TWO_PI, TWO_PI);
+      arc(200 + 25, 50, 25 , 35, PI + TWO_PI, TWO_PI);
+      arc(200 + 40, 50, 30 , 20 , PI + TWO_PI, TWO_PI);
+      arc(300, 50, 25 , 20, PI + TWO_PI, TWO_PI);
+      arc(300 + 10, 50, 25 , 45, PI + TWO_PI, TWO_PI);
+      arc(300 + 25, 50, 25 , 35, PI + TWO_PI, TWO_PI);
+      arc(300 + 40, 50, 30 , 20 , PI + TWO_PI, TWO_PI);
+      arc(400, 50, 25 , 20, PI + TWO_PI, TWO_PI);
+      arc(400 + 10, 50, 25 , 45, PI + TWO_PI, TWO_PI);
+      arc(400 + 25, 50, 25 , 35, PI + TWO_PI, TWO_PI);
+      arc(400 + 40, 50, 30 , 20 , PI + TWO_PI, TWO_PI);
+      //tete et couleur tete
 
+      fill(175, 96, 26);
+      circle(this.x + 270, 60, 60);
+
+      //oreile 1 et couleur oreille
+      fill(81, 90, 90);
+      triangle(this.x + 242, 50, this.x + 250, 38, this.x + 205, 34);
+
+      //oreille2
+      triangle(this.x + 299, 50, this.x + 290, 38, this.x + 330, 34);
+
+      //oeil1
+      fill(192, 57, 43);
+      ellipse(this.x + 255, 55, 10, 15);
+
+      //oeil2
+      ellipse(this.x + 285, 55, 10, 15);
+
+      //bouche + couleur
+      fill(255);
+      arc(this.x + 270, 70, 30, 20, 0, 3.14);
+      line(this.x + 255, 70, this.x + 285, 70);
+
+      //dent1
+      fill(174, 182, 191);
+      triangle(this.x + 260, 70, this.x + 265, 70, this.x + 266, 78);
+
+      //dent2
+      triangle(this.x + 273, 70, this.x + 279, 70, this.x + 276, 78);
+
+      //cou
+      fill(0);
+      rect(this.x + 260, 90, 20, 21, 10);
+
+      //roue 1
+      fill(0);
+      circle(this.x + 256, 210, 20);
+      //roue 2
+      fill(0);
+      circle(this.x + 285, 210, 20);
+
+      //jambe 1
+      fill(133, 193, 233);
+      ellipse(this.x + 256, 180, 25, 55);
+
+      //jambe2
+      ellipse(this.x + 285, 180, 25, 55);
+
+      //corp
+      fill(22, 160, 133);
+      square(this.x + 242, 101, 60);
+
+      //bras1
+      fill(127, 140, 141);
+      rect(this.x + 232, 101, 10, 35);
+
+      //bras2
+      rect(this.x + 302, 101, 10, 35);
+    },
+    arriver: function () {
+      if (this.x < 50) {
+        this.x = this.x + 2;
+      }
+    },
+    direBonjour: function () {
+      tagP.html("Bonjour, mon nom est " + this.strNomRobot);
+    },
+  }
 ];
-let arrCodeurs = [
-  { /* robot 0 */
+let arrCodeurs = [{
+    /* robot 0 */
     nom: "Marika Robitaille",
     pseudo: "marz",
     mets: "sushis et dumplings, tacos et fajitas",
@@ -1984,7 +2080,8 @@ let arrCodeurs = [
     activites: "faire de la musique, jouer à Valorant et sortir avec mes amis:)",
     texte: "Kiki, le robot, est conçu pour trier des déchets directement en les jetant. Ce qui se recycle est envoyé dans un tube. Ce qui ne se recycle pas, dans un autre. Les tubes sont alimentés par énergie solaire, tout comme le robot lui-même. Ces tubes mène chacun à une genre d'usine, qui, rendu là, j'espère, ne brulera pas les déchets."
   },
-  { /* robot 1 */
+  {
+    /* robot 1 */
     nom: "Rosalie Roy",
     pseudo: "pinkblossom",
     mets: "lasagne, macaroni, jambon",
@@ -1992,7 +2089,8 @@ let arrCodeurs = [
     activites: "musique, cuisine, vélo",
     texte: "Robbie, le robot est conçu pour cerner les émotions des gens et les aider et/ou réconforter avec celles-ci. Il aide les psychologues ainsi que les travailleurs sociaux afin de rendre la santé mentale des individus meilleure."
   },
-  { /* robot 2 */
+  {
+    /* robot 2 */
     nom: "Giselle Hessen",
     pseudo: "caramel",
     mets: "lasagne",
@@ -2000,7 +2098,8 @@ let arrCodeurs = [
     activites: "randonnée pédestre, art",
     texte: "Poupou, le robot, est conçu pour faire le ménage. Ce robot domestique permet de réaliser plusieurs tâches ménagères telles que laver les vitres, le sol, les comptoirs et les meubles. Aussi, il peut nettoyer les cuvettes, vider la poubelle et plier les vêtements. Poupou est capable de ranger les objets et lorsque son propriétaire a besoin de quelque chose, il peut lui apporter."
   },
-  { /* robot 3 */
+  {
+    /* robot 3 */
     nom: "Marianne Anctil",
     pseudo: "kinoko",
     mets: "poulet général tao, salade asiatique, lasagne",
@@ -2008,7 +2107,8 @@ let arrCodeurs = [
     activites: "wakeboard, volleyball, hockey",
     texte: "Markus, le robot, est conçu pour repérer les zones à haut niveau de pollution dans l'air, comme par exemple de grande quantité de smog. Il possède un système de filtrage interne qui lui permet de transformer l'air polluée à haut niveau de CO2 en air potable, comme le font les végétaux."
   },
-  { /* robot 4 */
+  {
+    /* robot 4 */
     nom: "Éloïse Matteau",
     pseudo: "kaixo",
     mets: "steak, hamburger",
@@ -2016,7 +2116,8 @@ let arrCodeurs = [
     activites: "soccer et snowboard",
     texte: "Le robot Kaneki a pour but de chercher des mines terrestres sur les champs de bataille et ainsi éviter de mettre en danger les soldats et/ou les chiens soldats."
   },
-  {  /* robot 5 */
+  {
+    /* robot 5 */
     nom: "Xavier Chamberland",
     pseudo: "charlie",
     mets: "hamburger, poutine, sushi",
@@ -2024,7 +2125,8 @@ let arrCodeurs = [
     activites: "randonnée, guitare, jeux vidéo",
     texte: "Mon robot est conçu pour écouter de la musique et d'en ressortir les partitions parfaites de tous les instruments, incluant les paroles. Il rend le travail de tout musiciens qui tentent de reproduire des musiques plus faciles."
   },
-  { /* robot 6 */
+  {
+    /* robot 6 */
     nom: "Laurianne Vallée",
     pseudo: "jetKiller",
     mets: "poutine et lasagne",
@@ -2032,7 +2134,8 @@ let arrCodeurs = [
     activites: "soccer",
     texte: "Jet, le robot, est conçu pour parler de mon créateur et de dire à travers moi ses préférences dans la vie."
   },
-  { /* robot 7 */
+  {
+    /* robot 7 */
     nom: "Andréanne Archambault",
     pseudo: "croquette",
     mets: "fondue, pâte, steak",
@@ -2040,15 +2143,17 @@ let arrCodeurs = [
     activites: "hiking, gaming, lecture",
     texte: "George, le robot, est conçu pour purifier l'eau. Il transforme l'eau polluée, souillée ou encore salée pour la rendre potable. Il rend cette eau accessible à la population mondiale."
   },
-  {  /* robot 8 */
-    nom:"Samuel Mutoo",
+  {
+    /* robot 8 */
+    nom: "Samuel Mutoo",
     pseudo: "shadowBless",
     mets: "poulet, riz, légumes",
     musique: "rap, R&B, afrobeat",
     activites: "football, vélo et dessin",
     texte: "HDA.44, le robot, est conçu pour augmenter les performances"
   },
-  {  /* robot 9 */
+  {
+    /* robot 9 */
     nom: "Benjamin Brouillette",
     pseudo: "satiric",
     mets: "sushis, tournedos de porc, pizza",
@@ -2056,7 +2161,8 @@ let arrCodeurs = [
     activites: "conditionnement physique, football",
     texte: "Roboto Roberto, le robot, est un modèle de la série ESR (Energy Stocking Robots) de la NASA qui permet de stocker l'énergie cinétique produite par le roulement de son corps dans ses batteries internes prévues à cet effet. Cette même énergie produite lui permet aussi de recharger sa batterie principale. De plus, il peut capturer l'énergie électrique inutilisée, que nos objets technologiques quotidiens auraient laissés échapper, à l'aide de l'aimant au centre de son corps, pour ainsi perdre le moins d'énergie possible. Lui et ses millions de frères permettent à nos villes de fonctionner uniquement à l'électricité et ainsi arrêter la pollution."
   },
-  {  /* robot 10 */
+  {
+    /* robot 10 */
     nom: "Michel K. Lord",
     pseudo: "marco",
     mets: "Bavette de boeuf avec sauce champignon et asperges, Fettucini alfredo avec tartare de saumon, Risotto de champignons sauvages avec fromage parmesan",
@@ -2064,7 +2170,8 @@ let arrCodeurs = [
     activites: "jogging, hicking",
     texte: "Ronaldo Gonzalez, le robot, est conçu pour modéliser les chaînes d'approvisionnement des produits afin de pouvoir réduire efficacement les inefficacités causant ainsi des pertes financières et générant des GES inutilement. Celui-ci pourrait d'ailleurs être présent lors de la conception de produits polluants afin d'offrir des alternatives responsables environnementalement. Les fins de semaine, Ronaldo remplace Superman afin de permettre celui-ci d'avoir des vacances bien méritées."
   },
-  {  /* robot 11 */
+  {
+    /* robot 11 */
     nom: "Justin Carrier",
     pseudo: "lilewis",
     mets: "lasagne",
@@ -2072,7 +2179,8 @@ let arrCodeurs = [
     activites: "volley-ball",
     texte: "Henri, le robot est conçu pour créer des mélodies pour des artistes. Il est doté d'une intelligence artificielle qui lui permet d'innover et de créer des chansons inconnues de l'homme. Henri a la capacité de reproduire tous les instruments de musique, tels que la guitare, la batterie, la Bass, etc."
   },
-  {  /* robot 12 */
+  {
+    /* robot 12 */
     nom: "Alexis Perron",
     pseudo: "mamie",
     mets: "hamburger, lasagne, mac&cheese",
@@ -2080,7 +2188,8 @@ let arrCodeurs = [
     activites: "snowboard, vélo",
     texte: "Flim, le robot, est conçu pour aider les humains à executer ou aider à faire des petites tâches simple du quotidien. Il divertit les humains en dansant ou compter des blagues!"
   },
-  {  /* robot 13 */
+  {
+    /* robot 13 */
     nom: "Guillaume Baillargeon",
     pseudo: "wyllix",
     mets: "lasagne, pâté chinois et pâtes au pesto",
@@ -2088,7 +2197,8 @@ let arrCodeurs = [
     activites: "soccer, randonnée et vélo",
     texte: "Exo, le robot, est conçu pour améliorer les problèmes climatiques que nous vivons présentement. Grâce à ses capacités, Exo permettra un avenir meilleur en facilitant le triage des déchets, en supprimant complètement l'utilisation du plastique et en limitant les déplacements à travers la planète."
   },
-  { /* robot 14 */
+  {
+    /* robot 14 */
     nom: "Louis-Philippe Roy",
     pseudo: "sky23",
     mets: "sushis",
@@ -2096,7 +2206,8 @@ let arrCodeurs = [
     activites: "soccer",
     texte: "Bob, le robot, est conçu pour faire la cuisine."
   },
-  { /* robot 15 */
+  {
+    /* robot 15 */
     nom: "Clodiane Charette",
     pseudo: "formitastic",
     mets: "Assiette terre et mer",
@@ -2104,7 +2215,8 @@ let arrCodeurs = [
     activites: "ski de fond et dessin",
     texte: "Bob ou Jack ou tout autre nom, dépendamment de son humeur est un robot qui s'occupait du Centre d'enrichissement d'Aperture Science avec GLaDOS avant que le centre ne se fasse détruire. Maintenant libéré du centre, il erre sur Terre. Il n'a pas grande utilité, sinon que d'exister."
   },
-  { /* robot 16 */
+  {
+    /* robot 16 */
     nom: "Isaac Dubé",
     pseudo: "izyy",
     mets: "raclette, steak, ailes poulet.",
@@ -2112,7 +2224,8 @@ let arrCodeurs = [
     activites: "golf, gaming, crossfit",
     texte: "Bonjour tout le monde, je vous présente mon robot, Kevin. Il adore la Monster, mais surtout les chars. Il adore acheter de nouvelles pièces pour rendre ses voitures plus performantes et plus belles."
   },
-  {  /* robot 17 */
+  {
+    /* robot 17 */
     nom: "Jérém Savard",
     pseudo: "sceki",
     mets: "lasagne, pizza, tacos",
@@ -2120,7 +2233,8 @@ let arrCodeurs = [
     activites: "snow, tennis, vtt",
     texte: "Pablo, le robot, est conçu pour traverser l'espace à la vitesse de la lumière pour chercher des solutions à la pollution parmi les autres civilisations extraterrestres qui ont déjà réglé le problème."
   },
-  {  /* robot 18 */
+  {
+    /* robot 18 */
     nom: "Anaïs Mannée-Batschy",
     pseudo: "ninis",
     mets: "gratin dauphinois",
@@ -2128,7 +2242,8 @@ let arrCodeurs = [
     activites: "course",
     texte: "Allobo, le robot, est conçu pour sauver les petits chats dans les arbres"
   },
-  {  /* robot 19 */
+  {
+    /* robot 19 */
     nom: "Christopher Byatt",
     pseudo: "falconDeloix",
     mets: "pâtes, poisson",
@@ -2136,7 +2251,8 @@ let arrCodeurs = [
     activites: "basketball, randonnée, entrainement",
     texte: "G'raha, le robot, est conçu pour analyser les documents d'une ancienne civilisation disparue ainsi que découvrir leurs secrets longtemps cachés."
   },
-  {  /* robot 20 */
+  {
+    /* robot 20 */
     nom: "Louis-Émile Vromet",
     pseudo: "le_singe",
     mets: "rap, hip-hop",
@@ -2145,7 +2261,8 @@ let arrCodeurs = [
     /* correction de quelques fautes */
     texte: "Island boy, le robot est conçu pour accompagner son maitre et participer à des partys. Il fait lever l'ambiance! Il boit beaucoup d'alcool ce sacré robot."
   },
-  {  /* robot 21 */
+  {
+    /* robot 21 */
     nom: "Chalarak Bergeron St-Pierre",
     pseudo: "takeko",
     mets: "sushis, pad thaï, soupe Pho",
@@ -2153,7 +2270,8 @@ let arrCodeurs = [
     activites: "karaté et soccer",
     texte: "Garon: Un ancien robot de guerre qui a été reprogrammé comme un robot domestique qui a comme but premier de protéger son propriétaire et ses êtres chers contre toutes menaces possibles. Son programme permet de détecter les menaces et de s'en débarrasser de façon pacifique à moins de situation extrême."
   },
-  {  /* robot 22 */
+  {
+    /* robot 22 */
     nom: "Janis Bouchard-Dufour",
     pseudo: "mist",
     mets: "bulgogi, saumon et crevette nordique",
@@ -2161,7 +2279,8 @@ let arrCodeurs = [
     activites: "lire un livre dehors, promener mon chien",
     texte: "Tiny, le robot, est conçu pour être une nounou. Elle peut raconter des histoires et s’occuper des enfants. Tiny, a déjà des histoires préenregistrées ,mais elle peut en produire elle-même lorsque les enfants veulent une histoire spéciale."
   },
-  {   /* robot 23 */
+  {
+    /* robot 23 */
     nom: "Daren Garneau-Dionne",
     pseudo: "nuit_etoilee123",
     mets: "sushi, club sandwich",
@@ -2169,7 +2288,8 @@ let arrCodeurs = [
     activites: "randonnée, série télé et jeu vidéo",
     texte: "Lisa, le robot est conçu pour créer des tableaux de peinture à la manière d’un artiste de l’époque en analysant les œuvres de cet artiste."
   },
-  {  /* robot 24 */
+  {
+    /* robot 24 */
     nom: "Malorie Ouellet",
     pseudo: "churros",
     mets: "sushis",
@@ -2177,14 +2297,14 @@ let arrCodeurs = [
     activites: "ski",
     texte: "R2D2 est conçu pour réduire les émissions de CO2"
   },
-  //  {   /* robot 25 */
-  //   nom:"Michael Smith",
-  //   pseudo: "shΛdΦω",
-  //   mets: "pizza,lasagne",
-  //   musique: "rock",
-  //   activites: "soccer, hockey, badminton",
-  //   texte: "Αιφπδ, le robot, est conçu pour jouer aux jeux vidéos, mémoriser les personnes qui ont changé le monde et accumuler les connaissances du passé"
-  // },
+   {   /* robot 25 */
+    nom:"Michael Smith",
+    pseudo: "shΛdΦω",
+    mets: "pizza,lasagne",
+    musique: "rock",
+    activites: "soccer, hockey, badminton",
+    texte: "Αιφπδ, le robot, est conçu pour jouer aux jeux vidéo, mémoriser les personnes qui ont changé le monde et accumulé les connaissances du passé."
+  }
 ];
 
 
@@ -2193,18 +2313,18 @@ let arrCodeurs = [
  ****************************************/
 function setup() {
   /* tirage au sort du premier robot : AJUSTER le nombre de valeurs */
-  intNoRobot = 9; 
+  intNoRobot = 9;
   // intNoRobot = Math.floor(Math.random() * arrRobots.length);
 
   let canevas = createCanvas(600, 350);
-  canevas.parent('sketch-holder'); 
+  canevas.parent('sketch-holder');
   // canevas.style('min-width', '300px');  
   // canevas.style('width', '100%'); 
 
   /* DÉBUT zone de paroles du robot */
   tagP = createP('...');
   tagP.position(0, 400);
-  tagP.style('width', '100%'); 
+  tagP.style('width', '100%');
   // tagP.style('width', '600px'); 
   tagP.style('background-color', 'rgba(255,255,255,0.5)');
   tagP.style('text-align', 'center');
