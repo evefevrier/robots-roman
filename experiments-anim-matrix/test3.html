@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 - anim matrix créée avec chatgpt</title>
+  <!-- Version avec la bibliothèque p5.js -->
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight); // crée un canvas de la taille de la fenêtre
+      frameRate(180); // définit la fréquence de rafraîchissement de l'animation à 60 fps
+      textSize(20); // définit la taille du texte à 20 pixels
+      textFont("monospace"); // définit la police de caractères à monospace
+      noStroke(); // désactive les bordures autour du texte
+    }
+
+    function draw() {
+      background(0); // efface le canvas avec une couleur noire
+      // const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*()_+-=[]{}|;':,./<>?"; // définit la liste de caractères
+      const chars = "01";
+      for (let i = 0; i < 1000; i++) {
+        const x = i * 20; // calcule la position horizontale du caractère
+        const y = random(height); // calcule la position verticale aléatoire du caractère  
+        const intHasard = Math.floor(Math.random() * chars.length);
+        const intTeinte = Math.floor(random(125, 255));
+        const intTransparence = Math.floor(random(0, 255));
+        fill(0, intTeinte, 0, intTransparence); // définit la couleur du texte à vert
+        text(chars[intHasard], x, y); // affiche le caractère à la position x, y
+      }
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - anim matrix créée avec chatgpt</title>
+    <style>
+        #matrix-background {
+          height: 100%;
+          width: 100%;
+        }
+      
+        .matrix-character {
+          color: green;
+          font-size: 12px;
+        }
+      </style>
+</head>
+<body>
+    <div id="matrix-background">
+        <!-- Grille de caractères générée par JavaScript -->
+      </div>
+      
+      <script>
+        // Génère une grille de caractères de style "Matrix" et l'ajoute à l'élément "matrix-background"
+        function generateMatrixBackground() {
+          const matrixBackground = document.getElementById("matrix-background");
+      
+          for (let i = 0; i < 1000; i++) {
+            // Crée un caractère aléatoire
+            const matrixCharacter = document.createElement("span");
+            matrixCharacter.innerText = generateRandomCharacter();
+            matrixCharacter.classList.add("matrix-character");
+      
+            // Ajoute le caractère à la grille
+            matrixBackground.appendChild(matrixCharacter);
+          }
+        }
+      
+        // Génère un caractère aléatoire de style "Matrix"
+        function generateRandomCharacter() {
+          const characters = "01";
+          return characters[Math.floor(Math.random() * characters.length)];
+        }
+      
+        // 2e essai de génération de caractères aléatoires
+        
+// const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*()_+-=[]{}|;':,./<>?";
+
+// const matrixAnimation = document.querySelector(".matrix-animation");
+
+// for (let i = 0; i < 1000; i++) {
+//   const char = document.createElement("div");
+//   char.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+//   char.classList.add("char");
+//   char.style.top = i * 20 + "px";
+//   matrixAnimation.appendChild(char);
+// }
+
+// setInterval(function() {
+//   const charElements = matrixAnimation.querySelectorAll(".char");
+//   charElements.forEach(function(char) {
+//     let top = parseInt(char.style.top);
+//     if (top < -20) {
+//       top = 1000;
+//     }
+//     char.style.top = top - 1 + "px";
+//   });
+// }, 50);
+ 
+      </script>
+</body>
+</html>

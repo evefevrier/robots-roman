@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - anim matrix créée avec chatgpt</title>
+    <!-- Cette animation consomme trop d'énergie CPU. -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        .matrix-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .char {
+            display: inline-block;
+            color: #00FF00;
+            opacity: 0.5;
+            font-size: 20px;
+            font-family: monospace;
+            position: absolute;
+            text-shadow: 0 0 5px #00FF00;
+            animation: matrix 10s linear infinite;
+            animation-delay: calc(50ms * var(--delay));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="matrix-animation">
+        <!-- animation goes here -->
+    </div>
+    <div class="main-content">
+        <!-- main content goes here -->
+    </div>
+    <script>
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*()_+-=[]{}|;':,./<>?";
+
+        const matrixAnimation = document.querySelector(".matrix-animation");
+
+
+        window.addEventListener("load", function () {
+
+
+            console.log("window.innerWidth: " + window.innerWidth);
+            for (let cptLargeur = 0; cptLargeur < window.innerWidth; cptLargeur = cptLargeur + 30) {
+                for (let i = 0; i < 50; i++) {
+                    const char = document.createElement("div");
+                    char.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+                    char.classList.add("char");
+                    const intDeploiement = Math.floor(Math.random() * 30);
+                    char.style.top = i * intDeploiement + "px";
+                    char.style.left = cptLargeur + "px";
+                    char.style.setProperty("--delay", Math.random());
+                    char.style.setProperty("opacity", Math.random());
+                    matrixAnimation.appendChild(char);
+                }
+            }
+
+            const charElements = matrixAnimation.querySelectorAll(".char");
+
+            setInterval(function () {
+                console.log("setInterval1");
+                charElements.forEach(function (char) {
+                    let top = parseInt(char.style.top);
+                    if (top < -20) {
+                        top = 1000;
+                    }
+                    const intDeplacement = Math.floor(Math.random() * 30);
+                    char.style.top = top - intDeplacement + "px";
+
+                });
+            }, 50); // 50ms
+
+        });
+
+        window.addEventListener("resize", function () {
+            console.log("window.innerWidth: " + window.innerWidth);
+            for (let cptLargeur = 0; cptLargeur < window.innerWidth; cptLargeur = cptLargeur + 30) {
+                for (let i = 0; i < 50; i++) {
+                    const char = document.createElement("div");
+                    char.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+                    char.classList.add("char");
+                    const intDeploiement = Math.floor(Math.random() * 30);
+                    char.style.top = i * intDeploiement + "px";
+                    char.style.left = cptLargeur + "px";
+                    char.style.setProperty("--delay", Math.random());
+                    char.style.setProperty("opacity", Math.random());
+                    matrixAnimation.appendChild(char);
+                }
+            }
+
+            const charElements = matrixAnimation.querySelectorAll(".char");
+
+            setInterval(function () {
+                console.log("setInterval2");
+                charElements.forEach(function (char) {
+                    let top = parseInt(char.style.top);
+                    if (top < -20) {
+                        top = 1000;
+                    }
+                    const intDeplacement = Math.floor(Math.random() * 30);
+                    char.style.top = top - intDeplacement + "px";
+
+                });
+            }, 50); // 50ms
+
+        });
+
+    </script>
+</body>
+
+</html>
