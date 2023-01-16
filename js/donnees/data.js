@@ -1183,7 +1183,7 @@ let arrCodeurs = new Array(
   {
     prenom: "Maxime",
     nom: "Lebrun",
-    pseudo: "Maxamax",
+    pseudo: "maxamax",
     metsFavoris: ["Poutine", "Lasagne", "Pizza"],
     hobbies: ["Jeux-video", "Hockey", "Cinéma"],
     stylesMusique: ["Rap", "Rock", "Pop"],
@@ -1415,7 +1415,7 @@ let arrCodeurs = new Array(
   {
     prenom: "Axel",
     nom: "Roberge",
-    pseudo: "GossipProg",
+    pseudo: "gossipProg",
     hobbies: ["sport", "gaming", "dessin", "mode", "garçons", "nourriture"],
     metsFavoris: [
       "Sushi",
@@ -2274,7 +2274,7 @@ let arrCodeurs = new Array(
   {
     prenom: "Félix",
     nom: "Vermette",
-    pseudo: "Captainfil",
+    pseudo: "captainfil",
     metsFavoris: ["Poutine", "burger d'orignal"],
     hobbies: ["jeux vidéo", "musique"],
     stylesMusique: ["Electronic"],
