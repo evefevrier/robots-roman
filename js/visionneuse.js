@@ -4,7 +4,7 @@
  * Contient fonctions utilitaires, objet visionneuse et écouteurs d'événement. Dans cet ordre.
  * @author  Ève Février, efevrier@csfoy.ca   
  */
- 
+
 
 
 // FONCTIONS UTILITAIRES
@@ -39,23 +39,23 @@ function obtenirMonIndice(strPseudo) {
      * @type {string}
      */
 
- const API_URL = 'https://api.qrserver.com/v1/create-qr-code/';
+const API_URL = 'https://api.qrserver.com/v1/create-qr-code/';
 
- async function generateQRCode(url) {
-     const response = await fetch(`${API_URL}?data=${url}&size=150x150`);
-     const data = await response.blob();
-     const imageUrl = URL.createObjectURL(data);
-     displayImage("jukebox", imageUrl, url);
- }
+async function generateQRCode(url) {
+   const response = await fetch(`${API_URL}?data=${url}&size=150x150`);
+   const data = await response.blob();
+   const imageUrl = URL.createObjectURL(data);
+   displayImage("jukebox", imageUrl, url);
+}
 
- function displayImage(strId, imageUrl, url) {
-     const imageElement = document.createElement('img');
-     imageElement.src = imageUrl;
-     const lien = document.createElement('a');
-      lien.href = url;
-      lien.appendChild(imageElement);
-     document.getElementById(strId).appendChild(lien);
- }
+function displayImage(strId, imageUrl, url) {
+   const imageElement = document.createElement('img');
+   imageElement.src = imageUrl;
+   const lien = document.createElement('a');
+   lien.href = url;
+   lien.appendChild(imageElement);
+   document.getElementById(strId).appendChild(lien);
+}
 
 /***************************************
  * Objet principal - app Visionneuse  
@@ -98,6 +98,7 @@ const visionneuse = {
       console.log("indice: " + indice + " sur " + (arrCodeurs.length - 1));
       console.log("C'est le robot de " + arrCodeurs[indice].pseudo);
       arrCodeurs[indice].robot.x = -600;
+      if (indice == 17) { arrCodeurs[indice].robot.x = 600; }
       this.changerCodeur();
    },
    changerCodeur: function () {
@@ -111,14 +112,14 @@ const visionneuse = {
       🍞 : ${arrCodeurs[indice].metsFavoris.join(", ")}<br>
       🕺: ${arrCodeurs[indice].hobbies.join(", ")}<br>
       🎵: ${arrCodeurs[indice].stylesMusique.join(", ")}<br>`
- 
+
 
       // faire une boucle sur urlsMusique  
       // pour chaque URL, générer un QR code
       document.getElementById("jukebox").innerHTML = "";
       for (let i = 0; i < arrCodeurs[indice].urlsMusique.length; i++) {
          generateQRCode(arrCodeurs[indice].urlsMusique[i]);
-      } 
+      }
       const refTitreJukeBox = document.createElement("h2");
       refTitreJukeBox.innerText = "Jukebox de " + arrCodeurs[indice].pseudo;
       document.getElementById("jukebox").appendChild(refTitreJukeBox);
@@ -185,5 +186,5 @@ document.getElementById("avatar").addEventListener("mouseleave", function () {
 /* au chargement de la page 'load' */
 window.addEventListener("load", function () {
    visionneuse.changerCodeur();
-}); 
+});
 
