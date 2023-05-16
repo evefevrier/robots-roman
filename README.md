@@ -23,6 +23,7 @@ Les robots ont été réalisés avec la bibliothèque [P5JS](https://p5js.org/).
 Les textes descriptifs des robots répondent à la question: 
 > À qui, à quoi servirait ton robot s'il était réel et doté d'intelligence artificielle?
 
-Visionner le projet [Robotsroman-2021](https://evefevrier.github.io/robots-roman/)
-
-Visionner le projet [Robotsroman-2020](https://evefevrier.github.io/robots-roman/2020/)
+Visionner le projet :
+- [Robotsroman-2022](https://evefevrier.github.io/robots-roman/)
+- [Robotsroman-2021](https://evefevrier.github.io/robots-roman/2021/)
+- [Robotsroman-2020](https://evefevrier.github.io/robots-roman/2020/)
